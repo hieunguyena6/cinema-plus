@@ -62,7 +62,9 @@ function MovieCarousel({ carouselClass, movies = [], title, to = null }) {
       }
     ]
   };
-  if (!movies.length) return null;
+	if (!movies.length) return null;
+	console.log(movies);
+	
   return (
     <div className={carouselClass}>
       <div className={classes.container}>
@@ -73,7 +75,7 @@ function MovieCarousel({ carouselClass, movies = [], title, to = null }) {
            :
           <Link to={to} style={{ textDecoration: 'none' }}>
           <Button className={classes.button} color="primary">
-            Explore All
+            Tất cả
           </Button>
         </Link>
       }

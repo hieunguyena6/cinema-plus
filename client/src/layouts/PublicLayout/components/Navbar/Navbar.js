@@ -38,21 +38,21 @@ class Navbar extends Component {
           })}>
           <Link className={classes.logoLink} to="/">
             <Typography className={classes.logo} variant="h2">
-              Cinema +
+              Phim +
             </Typography>
           </Link>
           <div className={classes.navLinks}>
             <Link className={classes.navLink} to="/">
-              Home
+              Trang chủ
             </Link>
             <Link className={classes.navLink} to="/movie/category/nowShowing">
-              Now Showing
+              Đang chiếu
             </Link>
             <Link className={classes.navLink} to="/movie/category/comingSoon">
-              Coming Soon
+              Sắp chiếu
             </Link>
             <Link className={classes.navLink} to="/cinemas">
-              Cinemas
+              Các rạp
             </Link>
           </div>
 
@@ -122,26 +122,26 @@ class Navbar extends Component {
               onClick={() => this.setState({ showMenu: !this.state.showMenu })}>
               <li className={classes.innerNavListItem}>
                 <Link className={classes.innerNavLink} to="/">
-                  Home
+                  Trang chủ
                 </Link>
               </li>
               <li className={classes.innerNavListItem}>
                 <Link
                   className={classes.innerNavLink}
                   to="/movie/category/nowShowing">
-                  Now Showing
+                  Đang chiếu
                 </Link>
               </li>
               <li className={classes.innerNavListItem}>
                 <Link
                   className={classes.innerNavLink}
                   to="/movie/category/comingSoon">
-                  Coming Soon
+                  Sắp chiếu
                 </Link>
               </li>
               <li className={classes.innerNavListItem}>
                 <Link className={classes.innerNavLink} to="/cinemas">
-                  Cinemas
+                  Các rạp
                 </Link>
               </li>
             </ul>

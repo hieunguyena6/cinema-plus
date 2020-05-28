@@ -29,7 +29,7 @@ class App extends Component {
           <Alert />
           <Routes />
           <div className="cursor" id="cursor" />
-          <div className="cursor2" id="cursor2" />
+					<div className="cursor2" id="cursor2" />
           <div className="cursor3" id="cursor3" />
         </ThemeProvider>
       </Provider>
