@@ -68,7 +68,7 @@ class Navbar extends Component {
                           ? '/admin/dashboard'
                           : '/mydashboard'
                       }>
-                      Dashboard
+                      Thông tin
                     </Link>
                   </ListItem>
                 )}
@@ -76,13 +76,13 @@ class Navbar extends Component {
                 {isAuth ? (
                   <ListItem>
                     <Link className={classes.navLink} onClick={logout} to="/">
-                      Logout
+                      Đăng xuất
                     </Link>
                   </ListItem>
                 ) : (
                   <ListItem>
                     <Link className={classes.navLink} to="/login">
-                      Login
+                      Đăng nhập
                     </Link>
                   </ListItem>
                 )}

@@ -91,7 +91,7 @@ function LoginForm(props) {
   return (
     <form className={classes.form}>
       <Typography className={classes.title} variant="h2">
-        Sign in
+        Đăng nhập
       </Typography>
 
       <div className={classes.socialLogin}>
@@ -115,22 +115,23 @@ function LoginForm(props) {
                 fontSize: 'calc(.27548vw + 12.71074px)',
                 fontWeight: 700
               }}>
-              Login With Google
+              Đăng nhập bằng Google
             </Button>
           )}
         />
         <FacebookLogin
           buttonStyle={{ width: '100%', height: 60 }}
-          appId={process.env.REACT_APP_FACEBOOK_APP_ID} //APP ID NOT CREATED YET
+          appId="2590963784466956" //APP ID NOT CREATED YET
           fields="name,email,picture"
-          callback={facebookLogin}
+					callback={facebookLogin}
+					textButton={"Đăng nhập bằng Facebook"}
         />
       </div>
 
       <div className={classes.fields}>
         <TextField
           className={classes.textField}
-          label="username"
+          label="Tên đăng nhập"
           name="username"
           onChange={event => handleFieldChange(event)}
           type="text"
@@ -139,7 +140,7 @@ function LoginForm(props) {
         />
         <TextField
           className={classes.textField}
-          label="Password"
+          label="Mật khẩu"
           name="password"
           onChange={event => handleFieldChange(event)}
           type="password"
@@ -154,12 +155,12 @@ function LoginForm(props) {
         onClick={() => props.login(values.username, values.password)}
         size="large"
         variant="contained">
-        Login now
+        Đăng nhập
       </Button>
       <Typography className={classes.register} variant="body1">
-        Don't have an account?
+        Không có tài khoản?
         <Link className={classes.registerUrl} to="/register">
-          register
+          đăng ký
         </Link>
       </Typography>
     </form>

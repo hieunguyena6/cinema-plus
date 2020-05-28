@@ -17,6 +17,7 @@ import {
   removeMovie
 } from '../../../../../store/actions';
 import FileUpload from '../../../../../components/FileUpload/FileUpload';
+import "moment/locale/vi";
 
 class AddMovie extends Component {
   state = {
@@ -225,7 +226,7 @@ class AddMovie extends Component {
             />
           </div>
           <div className={classes.field}>
-            <MuiPickersUtilsProvider utils={MomentUtils}>
+            <MuiPickersUtilsProvider utils={MomentUtils} locale="vi">
               <KeyboardDatePicker
                 className={classes.textField}
                 inputVariant="outlined"

@@ -1,6 +1,6 @@
 {
-  "name": "cinema-plus-client",
-  "version": "0.1.0",
+  "name": "phim-plus-client",
+  "version": "1.0.0",
   "private": true,
   "author": "hieunguyena6@gmail.com",
   "license": "MIT",
@@ -37,7 +37,7 @@
     "uuid": "3.3.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

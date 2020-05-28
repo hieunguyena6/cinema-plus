@@ -79,25 +79,25 @@ export default function BookingSeats(props) {
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(96, 93, 169)' }}></div>
-            Seat Available
+            Ghế trống
           </div>
           <div className={classes.seatInfo}>
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(65, 66, 70)' }}></div>
-            Reserved Seat
+            Ghế đã được người khác chọn
           </div>
           <div className={classes.seatInfo}>
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(120, 205, 4)' }}></div>
-            Selected Seat
+            Ghế đã chọn
           </div>
           <div className={classes.seatInfo}>
             <div
               className={classes.seatInfoLabel}
               style={{ background: 'rgb(14, 151, 218)' }}></div>
-            Recommended Seat
+            Ghế gợi ý
           </div>
         </div>
       </Box>

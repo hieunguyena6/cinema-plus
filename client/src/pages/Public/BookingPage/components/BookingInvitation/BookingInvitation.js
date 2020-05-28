@@ -36,21 +36,21 @@ export default function BookingInvitation(props) {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Typography variant="h4" align="center">
-          Guest Invitation
+          Gửi lời mời
         </Typography>
         <Typography
           className={classes.successInfo}
           variant="body1"
           align="center">
-          You have successfuly booked your seats. Please fill the emails below,
-          to send invitations to your friends!
+          Bạn đã đặt vé thành công. Hãy nhập email của bạn bè dưới đây để
+					gửi email mời họ tới buổi xem phim!
         </Typography>
         <Box width={1} textAlign="center">
           <Button
             color="primary"
             variant="outlined"
             onClick={() => onDownloadPDF()}>
-            Download Pass
+            Tải xuống mã QR
           </Button>
         </Box>
         <Grid className={classes.gridContainer} container spacing={3}>
@@ -60,9 +60,9 @@ export default function BookingInvitation(props) {
                 fullWidth
                 label="email"
                 name={`${convertToAlphabet(seat[0])}-${seat[1]}`}
-                helperText={`Please select an Email for Row : ${convertToAlphabet(
+                helperText={`Người ngồi vị trí hàng : ${convertToAlphabet(
                   seat[0]
-                )} - Seat Number : ${seat[1]}`}
+                )} - Số ghế : ${seat[1]}`}
                 margin="dense"
                 required
                 value={
@@ -80,7 +80,7 @@ export default function BookingInvitation(props) {
                 color="primary"
                 variant="outlined"
                 onClick={() => sendInvitations()}>
-                Send Invitations
+                Gửi lời mời
               </Button>
             </Grid>
             <Grid item>
@@ -89,7 +89,7 @@ export default function BookingInvitation(props) {
                 color="secondary"
                 variant="outlined"
                 onClick={() => ignore()}>
-                Ignore
+                Bỏ qua
               </Button>
             </Grid>
           </Grid>

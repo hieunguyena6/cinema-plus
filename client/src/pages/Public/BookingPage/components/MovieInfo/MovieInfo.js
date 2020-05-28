@@ -69,7 +69,7 @@ export default function MovieInfo(props) {
           {movie.director && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Director
+                Đạo diễn
               </Typography>
               <Typography variant="caption" color="inherit">
                 {movie.director}
@@ -79,7 +79,7 @@ export default function MovieInfo(props) {
           {movie.cast && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Cast
+                Diễn viên
               </Typography>
               <Typography variant="caption" color="inherit">
                 {movie.cast}
@@ -89,7 +89,7 @@ export default function MovieInfo(props) {
           {movie.genre && (
             <div className={classes.infoBox}>
               <Typography variant="subtitle1" color="inherit">
-                Genre
+                Thể loại
               </Typography>
               <Typography variant="caption" color="inherit">
                 {movie.genre}

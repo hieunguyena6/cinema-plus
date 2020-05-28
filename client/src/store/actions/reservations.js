@@ -56,10 +56,10 @@ export const addReservation = reservation => async dispatch => {
     });
     if (response.ok) {
       const { reservation, QRCode } = await response.json();
-      dispatch(setAlert('Reservation Created', 'success', 5000));
+      dispatch(setAlert('Đặt vé thành công', 'success', 5000));
       return {
         status: 'success',
-        message: 'Reservation Created',
+        message: 'Đặt vé thành công',
         data: { reservation, QRCode }
       };
     }
@@ -67,7 +67,7 @@ export const addReservation = reservation => async dispatch => {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Reservation have not been created, try again.'
+      message: ' Đặt vé thất bại. Hãy thử lại.'
     };
   }
 };
@@ -85,14 +85,14 @@ export const updateReservation = (reservation, id) => async dispatch => {
       body: JSON.stringify(reservation)
     });
     if (response.ok) {
-      dispatch(setAlert('Reservation Updated', 'success', 5000));
-      return { status: 'success', message: 'Reservation Updated' };
+      dispatch(setAlert('Cập nhật thành công', 'success', 5000));
+      return { status: 'success', message: 'Cập nhật thành công' };
     }
   } catch (error) {
     dispatch(setAlert(error.message, 'error', 5000));
     return {
       status: 'error',
-      message: ' Reservation have not been updated, try again.'
+      message: ' Cập nhật thất bại, hãy thử lại.'
     };
   }
 };

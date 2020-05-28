@@ -5,6 +5,7 @@ import {
   KeyboardDatePicker
 } from '@material-ui/pickers';
 import MomentUtils from '@date-io/moment';
+import "moment/locale/vi";
 
 export default function BookingForm(props) {
   const {
@@ -44,7 +45,7 @@ export default function BookingForm(props) {
           fullWidth
           select
           value={selectedCinema}
-          label="Select Cinema"
+          label="Chọn rạp"
           variant="outlined"
           onChange={onChangeCinema}>
           {cinemas.map(cinema => (
@@ -56,13 +57,13 @@ export default function BookingForm(props) {
       </Grid>
       {showtime && (
         <Grid item xs>
-          <MuiPickersUtilsProvider utils={MomentUtils}>
+          <MuiPickersUtilsProvider locale="vi" utils={MomentUtils}>
             <KeyboardDatePicker
               inputVariant="outlined"
               margin="none"
               fullWidth
               id="start-date"
-              label="Start Date"
+              label="Ngày đặt vé"
               minDate={new Date(showtime.startDate)}
               maxDate={new Date(showtime.endDate)}
               value={selectedDate}
@@ -80,7 +81,7 @@ export default function BookingForm(props) {
             fullWidth
             select
             value={selectedTime}
-            label="Select Time"
+            label="Giờ đặt vé"
             variant="outlined"
             onChange={onChangeTime}>
             {times.map((time, index) => (

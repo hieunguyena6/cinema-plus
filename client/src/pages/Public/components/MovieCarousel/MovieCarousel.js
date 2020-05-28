@@ -5,6 +5,8 @@ import { makeStyles, Typography, Button } from '@material-ui/core';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from 'react-responsive-carousel';
 import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import MovieCardSimple from '../MovieCardSimple/MovieCardSimple';
 import styles from './styles';

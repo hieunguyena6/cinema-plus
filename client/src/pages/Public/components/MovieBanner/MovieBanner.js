@@ -90,14 +90,14 @@ function MovieBanner(props) {
         {fullDescription ? (
           <Link to={`booking/${movie._id}`} style={{ textDecoration: 'none' }}>
             <Button variant="contained" className={classes.button}>
-              Buy Tickets
+              Mua vé
               <ArrowRightAlt className={classes.buttonIcon} />
             </Button>
           </Link>
         ) : (
           <Link to={`movie/${movie._id}`} style={{ textDecoration: 'none' }}>
             <Button className={classnames(classes.button, classes.learnMore)}>
-              Learn More
+              Xem thêm
               <ArrowRightAlt className={classes.buttonIcon} />
             </Button>
           </Link>

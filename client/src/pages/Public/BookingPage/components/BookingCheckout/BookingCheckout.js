@@ -38,14 +38,14 @@ export default function BookingCheckout(props) {
           <Grid container spacing={3} style={{ padding: 20 }}>
             {user && user.name && (
               <Grid item className={classes.hideOnSmall}>
-                <Typography className={classes.bannerTitle}>Name</Typography>
+                <Typography className={classes.bannerTitle}>Tên</Typography>
                 <Typography className={classes.bannerContent}>
                   {user.name}
                 </Typography>
               </Grid>
             )}
             <Grid item>
-              <Typography className={classes.bannerTitle}>Tickets</Typography>
+              <Typography className={classes.bannerTitle}>Số vé</Typography>
               {selectedSeats > 0 ? (
                 <Typography className={classes.bannerContent}>
                   {selectedSeats} tickets
@@ -55,9 +55,9 @@ export default function BookingCheckout(props) {
               )}
             </Grid>
             <Grid item>
-              <Typography className={classes.bannerTitle}>Price</Typography>
+              <Typography className={classes.bannerTitle}>Giá</Typography>
               <Typography className={classes.bannerContent}>
-                {ticketPrice * selectedSeats} &euro;
+                {ticketPrice * selectedSeats}.000 VNĐ
               </Typography>
             </Grid>
           </Grid>
@@ -76,7 +76,7 @@ export default function BookingCheckout(props) {
             fullWidth
             disabled={seatsAvailable <= 0}
             onClick={() => onBookSeats()}>
-            Checkout
+            Đặt vé
           </Button>
         </Grid>
       </Grid>
