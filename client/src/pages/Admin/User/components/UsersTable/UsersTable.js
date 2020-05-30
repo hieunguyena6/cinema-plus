@@ -33,7 +33,7 @@ class UsersTable extends Component {
 
   static defaultProps = {
     users: [],
-    onSelect: () => {}
+    onSelect: () => { }
   };
 
   handleChangePage = (event, page) => {
@@ -72,11 +72,11 @@ class UsersTable extends Component {
                     }
                     onChange={onSelectAll}
                   />
-                  Name
+                  Tên
                 </TableCell>
                 <TableCell align="left">Username</TableCell>
                 <TableCell align="left">Email</TableCell>
-                <TableCell align="left">Registration date</TableCell>
+                <TableCell align="left">Ngày đăng ký</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

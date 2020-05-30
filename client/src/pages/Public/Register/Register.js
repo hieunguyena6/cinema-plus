@@ -83,7 +83,7 @@ class Register extends Component {
                   <div className={classes.fields}>
                     <TextField
                       className={classes.textField}
-                      label="Full name"
+                      label="Họ tên"
                       name="name"
                       value={values.name}
                       onChange={event =>
@@ -103,7 +103,7 @@ class Register extends Component {
                     />
                     <TextField
                       className={classes.textField}
-                      label="Email address"
+                      label="Email"
                       name="email"
                       value={values.email}
                       onChange={event =>
@@ -113,7 +113,7 @@ class Register extends Component {
                     />
                     <TextField
                       className={classes.textField}
-                      label="Mobile Phone"
+                      label="SĐT"
                       name="phone"
                       value={values.phone}
                       variant="outlined"
@@ -152,9 +152,9 @@ class Register extends Component {
                       <Typography
                         className={classes.policyText}
                         variant="body1">
-                        I have read the &nbsp;
+                        Tôi đã đọc &nbsp;
                         <Link className={classes.policyUrl} to="#">
-                          Terms and Conditions
+                          đồng ý các điều khoản
                         </Link>
                         .
                       </Typography>
@@ -168,13 +168,13 @@ class Register extends Component {
                     onClick={this.handleRegister}
                     size="large"
                     variant="contained">
-                    Register now
+                    Đăng ký
                   </Button>
 
                   <Typography className={classes.login} variant="body1">
-                    Have an account?{' '}
+                    Đã có tài khoản?{' '}
                     <Link className={classes.loginUrl} to="/login">
-                      Login
+                      Đăng nhập
                     </Link>
                   </Typography>
                 </form>

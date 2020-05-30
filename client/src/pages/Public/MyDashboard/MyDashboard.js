@@ -42,8 +42,6 @@ function MyDashboard(props) {
     reservation => reservation.username === user.username
   );
 
-  console.log(myReservations);
-
   return (
     <Container>
       <Grid container spacing={2}>
@@ -54,7 +52,7 @@ function MyDashboard(props) {
                 className={classes.title}
                 variant="h2"
                 color="inherit">
-                My Reservations
+                Các vé đã đặt
               </Typography>
             </Grid>
             <Grid item xs={12}>
@@ -68,7 +66,7 @@ function MyDashboard(props) {
         )}
         <Grid item xs={12}>
           <Typography className={classes.title} variant="h2" color="inherit">
-            My Account
+            Tài khoản của tôi
           </Typography>
         </Grid>
         <Grid item xs={12}>

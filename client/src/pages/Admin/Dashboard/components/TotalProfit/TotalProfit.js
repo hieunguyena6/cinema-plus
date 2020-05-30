@@ -45,7 +45,7 @@ const TotalProfit = props => {
               color="inherit"
               gutterBottom
               variant="body2">
-              TOTAL PROFIT
+              TỔNG SỐ TIỀN
             </Typography>
             <Typography color="inherit" variant="h3">
               $23,200

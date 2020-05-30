@@ -34,8 +34,8 @@ class ReservationsTable extends Component {
     reservations: [],
     movies: [],
     cinemas: [],
-    onSelect: () => {},
-    onShowDetails: () => {}
+    onSelect: () => { },
+    onShowDetails: () => { }
   };
 
   handleChangePage = (event, page) => {
@@ -64,11 +64,11 @@ class ReservationsTable extends Component {
               <TableRow>
                 <TableCell align="left">User</TableCell>
                 <TableCell align="left">Phone</TableCell>
-                <TableCell align="left">Start At</TableCell>
-                <TableCell align="left">Movie</TableCell>
-                <TableCell align="left">Cinema</TableCell>
-                <TableCell align="left">Ticket Price</TableCell>
-                <TableCell align="left">Total</TableCell>
+                <TableCell align="left">Giờ chiếu</TableCell>
+                <TableCell align="left">Phim</TableCell>
+                <TableCell align="left">Rạp</TableCell>
+                <TableCell align="left">Gía vé</TableCell>
+                <TableCell align="left">Tổng cộng</TableCell>
                 <TableCell align="left">Checkin</TableCell>
               </TableRow>
             </TableHead>

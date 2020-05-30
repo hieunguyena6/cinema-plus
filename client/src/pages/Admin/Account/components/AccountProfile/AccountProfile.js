@@ -51,7 +51,7 @@ class AccountProfile extends Component {
               component="span"
               color="primary"
               variant="text">
-              Upload picture
+              Tải lên ảnh
             </Button>
           </label>
           <span>{file && file.name}</span>

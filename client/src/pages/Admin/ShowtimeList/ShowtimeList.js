@@ -50,15 +50,15 @@ class ShowtimeList extends Component {
         />
         <div className={classes.content}>
           {!showtimes.length ? (
-            <Typography variant="h6">There are no showtimes</Typography>
+            <Typography variant="h6">Không có suất chiếu nào</Typography>
           ) : (
-            <ShowtimesTable
-              onSelectShowtime={selectShowtime}
-              selectedShowtimes={selectedShowtimes}
-              selectAllShowtimes={selectAllShowtimes}
-              showtimes={showtimes}
-            />
-          )}
+              <ShowtimesTable
+                onSelectShowtime={selectShowtime}
+                selectedShowtimes={selectedShowtimes}
+                selectAllShowtimes={selectAllShowtimes}
+                showtimes={showtimes}
+              />
+            )}
         </div>
         <ResponsiveDialog
           id="Add-showtime"

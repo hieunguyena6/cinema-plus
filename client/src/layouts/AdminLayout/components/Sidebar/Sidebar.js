@@ -46,7 +46,7 @@ class Sidebar extends Component {
             </ListItemIcon>
             <ListItemText
               classes={{ primary: classes.listItemText }}
-              primary="Movies"
+              primary="Các phim"
             />
           </ListItem>
           <ListItem
@@ -59,7 +59,7 @@ class Sidebar extends Component {
             </ListItemIcon>
             <ListItemText
               classes={{ primary: classes.listItemText }}
-              primary="Cinemas"
+              primary="Các rạp"
             />
           </ListItem>
           <ListItem
@@ -72,7 +72,7 @@ class Sidebar extends Component {
             </ListItemIcon>
             <ListItemText
               classes={{ primary: classes.listItemText }}
-              primary="Showtimes"
+              primary="Suất chiếu"
             />
           </ListItem>
           <ListItem
@@ -85,7 +85,7 @@ class Sidebar extends Component {
             </ListItemIcon>
             <ListItemText
               classes={{ primary: classes.listItemText }}
-              primary="Reservations"
+              primary="Các vé đã đặt"
             />
           </ListItem>
           {user && user.role === 'superadmin' && (
@@ -118,28 +118,6 @@ class Sidebar extends Component {
           </ListItem>
         </List>
         <Divider className={classes.listDivider} />
-        <List
-          component="div"
-          disablePadding
-          subheader={
-            <ListSubheader className={classes.listSubheader}>
-              Support
-            </ListSubheader>
-          }>
-          <ListItem
-            className={classes.listItem}
-            component="a"
-            href="http://georgesimos.com"
-            target="_blank">
-            <ListItemIcon className={classes.listItemIcon}>
-              <InfoIcon />
-            </ListItemIcon>
-            <ListItemText
-              classes={{ primary: classes.listItemText }}
-              primary="Customer support"
-            />
-          </ListItem>
-        </List>
       </section>
     );
   }

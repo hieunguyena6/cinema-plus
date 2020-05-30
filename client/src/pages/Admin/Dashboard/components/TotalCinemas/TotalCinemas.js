@@ -55,7 +55,7 @@ const TotalCinemas = props => {
               color="textSecondary"
               gutterBottom
               variant="body2">
-              TOTAL CINEMAS
+              TỔNG SỐ RẠP
             </Typography>
             <Typography variant="h3">{cinemas}</Typography>
           </Grid>
@@ -71,7 +71,7 @@ const TotalCinemas = props => {
             16%
           </Typography>
           <Typography className={classes.caption} variant="caption">
-            Since last month
+            Tăng trưởng
           </Typography>
         </div>
       </CardContent>

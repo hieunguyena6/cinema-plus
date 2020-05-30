@@ -64,23 +64,22 @@ function MovieCarousel({ carouselClass, movies = [], title, to = null }) {
       }
     ]
   };
-	if (!movies.length) return null;
-	console.log(movies);
-	
+  if (!movies.length) return null;
+
   return (
     <div className={carouselClass}>
       <div className={classes.container}>
         <Typography className={classes.h2} variant="h2" color="inherit">
           {title}
         </Typography>
-        {to==null? null
-           :
+        {to == null ? null
+          :
           <Link to={to} style={{ textDecoration: 'none' }}>
-          <Button className={classes.button} color="primary">
-            Tất cả
+            <Button className={classes.button} color="primary">
+              Tất cả
           </Button>
-        </Link>
-      }
+          </Link>
+        }
       </div>
       <Slider {...settings} className={classes.slider}>
         {movies.map(movie => (

@@ -109,8 +109,8 @@ class AddMovie extends Component {
     } = this.state;
 
     const rootClassName = classNames(classes.root, className);
-    const subtitle = this.props.edit ? 'Edit Movie' : 'Add Movie';
-    const submitButton = this.props.edit ? 'Update Movie' : 'Save Details';
+    const subtitle = this.props.edit ? 'Sửa phim' : 'Thêm phim mới';
+    const submitButton = this.props.edit ? 'Cập nhật' : 'Lưu thông tin';
     const submitAction = this.props.edit
       ? () => this.onUpdateMovie()
       : () => this.onAddMovie();
@@ -124,8 +124,8 @@ class AddMovie extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              helperText="Please specify the title"
-              label="Title"
+              helperText="Tên phim"
+              label="Tên phim"
               margin="dense"
               required
               value={title}
@@ -140,7 +140,7 @@ class AddMovie extends Component {
               multiple
               displayEmpty
               className={classes.textField}
-              label="Genre"
+              label="Thể loại"
               margin="dense"
               required
               value={genre}
@@ -160,7 +160,7 @@ class AddMovie extends Component {
               fullWidth
               multiline
               className={classes.textField}
-              label="Description"
+              label="Mô tả"
               margin="dense"
               required
               variant="outlined"
@@ -174,7 +174,7 @@ class AddMovie extends Component {
             <TextField
               select
               className={classes.textField}
-              label="Language"
+              label="Ngôn ngữ"
               margin="dense"
               required
               value={language}
@@ -191,7 +191,7 @@ class AddMovie extends Component {
 
             <TextField
               className={classes.textField}
-              label="Duration"
+              label="Thời gian"
               margin="dense"
               type="number"
               value={duration}
@@ -204,7 +204,7 @@ class AddMovie extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              label="Director"
+              label="Đạo diễn"
               margin="dense"
               required
               value={director}
@@ -215,7 +215,7 @@ class AddMovie extends Component {
             />
             <TextField
               className={classes.textField}
-              label="Cast"
+              label="Diễn viên"
               margin="dense"
               required
               value={cast}
@@ -232,7 +232,7 @@ class AddMovie extends Component {
                 inputVariant="outlined"
                 margin="normal"
                 id="release-date"
-                label="Release Date"
+                label="Ngày công chiếu"
                 value={releaseDate}
                 onChange={date =>
                   this.handleFieldChange('releaseDate', date._d)
@@ -247,7 +247,7 @@ class AddMovie extends Component {
                 inputVariant="outlined"
                 margin="normal"
                 id="end-date"
-                label="End Date"
+                label="Ngày kết thúc"
                 value={endDate}
                 onChange={date => this.handleFieldChange('endDate', date._d)}
                 KeyboardButtonProps={{
@@ -281,7 +281,7 @@ class AddMovie extends Component {
             className={classes.buttonFooter}
             variant="contained"
             onClick={this.onRemoveMovie}>
-            Delete Movie
+            Xóa phim
           </Button>
         )}
       </div>

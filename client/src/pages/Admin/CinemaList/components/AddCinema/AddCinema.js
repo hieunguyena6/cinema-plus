@@ -60,8 +60,8 @@ class AddCinema extends Component {
     type === 'create'
       ? (notification = await createCinemas(image, cinema))
       : type === 'update'
-      ? (notification = await updateCinemas(image, cinema, _id))
-      : (notification = await removeCinemas(_id));
+        ? (notification = await updateCinemas(image, cinema, _id))
+        : (notification = await removeCinemas(_id));
     this.setState({ notification });
     if (notification && notification.status === 'success') getCinemas();
   };
@@ -88,7 +88,7 @@ class AddCinema extends Component {
       <>
         <div className={classes.field}>
           <Button onClick={() => this.onAddSeatRow()}>
-            <Add /> add Seats
+            <Add /> Thêm chỗ ngồi
           </Button>
         </div>
         {seats.length > 0 &&
@@ -98,7 +98,7 @@ class AddCinema extends Component {
                 key={`new-seat-${index}`}
                 className={classes.textField}
                 label={
-                  'Add number of seats for row : ' +
+                  'Số ghế hàng : ' +
                   (index + 10).toString(36).toUpperCase()
                 }
                 margin="dense"
@@ -108,7 +108,7 @@ class AddCinema extends Component {
                 type="number"
                 inputProps={{
                   min: 0,
-                  max: 10
+                  max: 15
                 }}
                 onChange={event =>
                   this.handleSeatsChange(index, event.target.value)
@@ -132,10 +132,10 @@ class AddCinema extends Component {
     } = this.state;
 
     const rootClassName = classNames(classes.root, className);
-    const mainTitle = this.props.editCinema ? 'Edit Cinema' : 'Add Cinema';
+    const mainTitle = this.props.editCinema ? 'Sửa rạp' : 'Thêm rạp mới';
     const submitButton = this.props.editCinema
-      ? 'Update Cinema'
-      : 'Save Details';
+      ? 'Cập nhập'
+      : 'Lưu';
     const submitAction = this.props.editCinema
       ? () => this.onSubmitAction('update')
       : () => this.onSubmitAction('create');
@@ -149,7 +149,7 @@ class AddCinema extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              helperText="Please specify the cinema name"
+              helperText="Nhập tên rạp"
               label="Name"
               margin="dense"
               required
@@ -163,7 +163,7 @@ class AddCinema extends Component {
             <TextField
               fullWidth
               className={classes.textField}
-              label="City"
+              label="Địa chỉ"
               margin="dense"
               required
               variant="outlined"
@@ -187,7 +187,7 @@ class AddCinema extends Component {
           <div className={classes.field}>
             <TextField
               className={classes.textField}
-              label="Ticket Price"
+              label="Gía vé"
               margin="dense"
               type="number"
               value={ticketPrice}
@@ -198,7 +198,7 @@ class AddCinema extends Component {
             />
             <TextField
               className={classes.textField}
-              label="Seats Available"
+              label="Chỗ khả dụng"
               margin="dense"
               required
               value={seatsAvailable}
@@ -224,7 +224,7 @@ class AddCinema extends Component {
             className={classes.buttonFooter}
             variant="contained"
             onClick={() => this.onSubmitAction('remove')}>
-            Delete Cinema
+            Xóa rạp
           </Button>
         )}
 
@@ -237,13 +237,13 @@ class AddCinema extends Component {
               {notification.message}
             </Typography>
           ) : (
-            <Typography
-              className={classes.infoMessage}
-              color="error"
-              variant="caption">
-              {notification.message}
-            </Typography>
-          )
+              <Typography
+                className={classes.infoMessage}
+                color="error"
+                variant="caption">
+                {notification.message}
+              </Typography>
+            )
         ) : null}
       </div>
     );

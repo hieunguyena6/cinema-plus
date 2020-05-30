@@ -28,7 +28,8 @@ router.post('/movies/photo/:id', upload('movies').single('file'), async (req, re
     }
     const movie = await Movie.findById(movieId);
     if (!movie) return res.sendStatus(404);
-    movie.image = `${url}/${file.path}`;
+    const filePath = file.path.replace(/\\/g, '/');
+    movie.image = `${url}/${filePath}`;
     await movie.save();
     res.send({ movie, file });
   } catch (e) {

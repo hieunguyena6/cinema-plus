@@ -83,7 +83,9 @@ function MovieBanner(props) {
       <div
         className={classes.blurBackground}
         style={{
-          backgroundImage: `url(${movie.image})`
+          backgroundImage: `url(${movie.image})`,
+          backgroundPosition: 'center',
+          // backgroundSize: '100% 100%'
         }}
       />
       <div className={classes.movieActions}>
@@ -95,13 +97,13 @@ function MovieBanner(props) {
             </Button>
           </Link>
         ) : (
-          <Link to={`movie/${movie._id}`} style={{ textDecoration: 'none' }}>
-            <Button className={classnames(classes.button, classes.learnMore)}>
-              Xem thêm
+            <Link to={`movie/${movie._id}`} style={{ textDecoration: 'none' }}>
+              <Button className={classnames(classes.button, classes.learnMore)}>
+                Xem thêm
               <ArrowRightAlt className={classes.buttonIcon} />
-            </Button>
-          </Link>
-        )}
+              </Button>
+            </Link>
+          )}
       </div>
     </div>
   );

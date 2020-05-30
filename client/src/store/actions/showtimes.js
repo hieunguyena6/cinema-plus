@@ -26,7 +26,23 @@ export const getShowtimes = () => async dispatch => {
         Authorization: `Bearer ${token}`
       }
     });
-    const showtimes = await response.json();
+    let showtimes = await response.json();
+    showtimes.forEach(async (item, i) => {
+      const movieName = await fetch(`movies/${item.movieId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      const cinameName = await fetch(`cinames/${item.cinameId}`, {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      showtimes[i].movieName = await movieName.json().title;
+      showtimes[i].cinameName = await cinameName.json().name;
+    });
     if (response.ok) {
       dispatch({ type: GET_SHOWTIMES, payload: showtimes });
     }

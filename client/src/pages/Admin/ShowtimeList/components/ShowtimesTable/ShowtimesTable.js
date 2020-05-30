@@ -33,8 +33,8 @@ class ShowtimesTable extends Component {
 
   static defaultProps = {
     showtimes: [],
-    onSelect: () => {},
-    onShowDetails: () => {}
+    onSelect: () => { },
+    onShowDetails: () => { }
   };
 
   handleChangePage = (event, page) => {
@@ -55,7 +55,6 @@ class ShowtimesTable extends Component {
       selectAllShowtimes
     } = this.props;
     const { rowsPerPage, page } = this.state;
-
     const rootClassName = classNames(classes.root, className);
     return (
       <Portlet className={rootClassName}>
@@ -75,11 +74,11 @@ class ShowtimesTable extends Component {
                   />
                   ID
                 </TableCell>
-                <TableCell align="left">Movie</TableCell>
-                <TableCell align="left">Cinema</TableCell>
-                <TableCell align="left">Start Date</TableCell>
-                <TableCell align="left">End Date</TableCell>
-                <TableCell align="left">Time</TableCell>
+                <TableCell align="left">Phim</TableCell>
+                <TableCell align="left">Rạp</TableCell>
+                <TableCell align="left">Ngày công chiếu</TableCell>
+                <TableCell align="left">Ngày kết thúc</TableCell>
+                <TableCell align="left">Giờ chiếu</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
@@ -112,10 +111,10 @@ class ShowtimesTable extends Component {
                       </div>
                     </TableCell>
                     <TableCell className={classes.tableCell}>
-                      {showtime.movieId}
+                      {showtime.movieName}
                     </TableCell>
                     <TableCell className={classes.tableCell}>
-                      {showtime.cinemaId}
+                      {showtime.cinemaName}
                     </TableCell>
                     <TableCell className={classes.tableCell}>
                       {moment(showtime.startDate).format('DD/MM/YYYY')}

@@ -100,11 +100,11 @@ class AddShowtime extends Component {
 
     const rootClassName = classNames(classes.root, className);
     const title = this.props.selectedShowtime
-      ? 'Edit Showtime'
-      : 'Add Showtime';
+      ? 'Sửa suất chiếu'
+      : 'Thêm suất chiếu';
     const submitButton = this.props.selectedShowtime
-      ? 'Update Showtime'
-      : 'Save Details';
+      ? 'Cập nhật'
+      : 'Lưu';
     const submitAction = this.props.selectedShowtime
       ? () => this.onUpdateShowtime()
       : () => this.onAddShowtime();
@@ -121,7 +121,7 @@ class AddShowtime extends Component {
               select
               className={classes.textField}
               helperText="Please specify the Time"
-              label="Time"
+              label="Thời gian"
               margin="dense"
               required
               value={startAt}
@@ -143,7 +143,7 @@ class AddShowtime extends Component {
               fullWidth
               select
               className={classes.textField}
-              label="Movie"
+              label="Phim"
               margin="dense"
               required
               value={movieId}
@@ -162,7 +162,7 @@ class AddShowtime extends Component {
               fullWidth
               select
               className={classes.textField}
-              label="Cinema"
+              label="Rạp"
               margin="dense"
               required
               value={cinemaId}
@@ -185,7 +185,7 @@ class AddShowtime extends Component {
                 inputVariant="outlined"
                 margin="normal"
                 id="start-date"
-                label="Start Date"
+                label="Ngày bắt đầu"
                 minDate={new Date()}
                 maxDate={this.onFilterMaxDate()}
                 value={startDate}
@@ -200,7 +200,7 @@ class AddShowtime extends Component {
                 inputVariant="outlined"
                 margin="normal"
                 id="end-date"
-                label="End Date"
+                label="Ngày kết thúc"
                 minDate={new Date(startDate)}
                 maxDate={this.onFilterMaxDate()}
                 value={endDate}
